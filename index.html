@@ -1,32 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Haiku Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-</head>
-<body>
+    <script
+      src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
+      defer
+    ></script>
+  </head>
+  <body>
     <header>
-    <h1>Welcome to the AI Haiku Generator</h1>
+      <h1>Welcome to the AI Haiku Generator</h1>
     </header>
+    <div class="container">
+      <main>
+        <div class="form-container">
+          <div>
+            <form id="haiku-generator">
+              <input
+                type="text"
+                placeholder="Enter a subject for the Haiku"
+                autofocus
+                required
+                autocomplete="off"
+                class="prompt"
+                id="user-prompt"
+              />
+              <input type="submit" class="button" />
+            </form>
+            <div class="user-tips">
+              For example: birds, winter, bicycles, chocolate. Choose something
+              that would be in a city. This is a city-based haiku.
+            </div>
+          </div>
+        </div>
 
-    <main>
-<form>
-    <input type="text" placeholder="Input the topic of the Haiku" autofucus required autocomplete="off"/>
-    <input type="submit">
-</form>
-<div>
-    the haiku will go here- line 1<br>
-    line 2
-    <br>
-    line 3
-    <br>
-</div>
+        <div class="haiku hidden" id="haiku"></div>
+      </main>
+    </div>
 
-    </main>
-
-    <footer>coded by Katherine Bettis and available on <a href="https://github.com/starpurplekath/haiku-generator.git">Github</a> and on <a herf="https://haiku-generator-katherine.netlify.app/">Netlify</a></footer>
-    <script src="src/index.js"></script>
-</body>
+    <footer>
+      coded by Katherine Bettis and available on
+      <a href="https://github.com/starpurplekath/haiku-generator.git">Github</a>
+      and on
+      <a href="https://haiku-generator-katherine.netlify.app/">Netlify</a>
+    </footer>
+    <script src="src/index.js" defer></script>
+  </body>
 </html>
